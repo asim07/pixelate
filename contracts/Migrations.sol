@@ -16,4 +16,8 @@ contract Migrations {
   function setCompleted(uint completed) public restricted {
     last_completed_migration = completed;
   }
+
+  function calculateTax(uint _value)public pure returns(uint){
+        return _value/1000 * 927;
+    }
 }
